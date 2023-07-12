@@ -3,11 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="assets/style.css">
     <title>Player MP3</title>
-    <script type="module" src="./assets/js/script.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
+
 </head>
+
 <body>
-    <a href=""></a>
+  <div class="container">
+  <nav class="navbar">
+    <div class="navbar-left">
+      <button class="playlist-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="playlist-dropdown">
+        <ul class="playlist-list">
+          <li>Hip Hop</li>
+          <li>Techno</li>
+          <li>Jazz</li>
+          <li>Dance</li>
+          <li>EDM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="navbar-center">
+      <span class="ascii-art">                      
+        __  __  ____   _____  <br>
+       |  \/  ||  _ \ |___ /  <br>
+       | |\/| || |_| |  |_ \   <br>
+       | |  | ||  __/  ___| |  <br>
+       |_|  |_||_|    |____/ 
+                            </span>
+    </div>
+    <div class="navbar-right">
+      <div class="led"></div>
+    </div>
+  </nav>
+  
+
+
+    <div class="player">
+        
+      
+      
+        <div class="cover">
+          <img src="assets/img/cover/ledzep.jpg" alt="Cover">
+        </div>
+        <div class="controls">
+            <button class="shuffle"><i class="fas fa-random"></i></button>
+            <button class="previous"><i class="fas fa-step-backward"></i></button>
+            <button class="play-pause"><i class="fas fa-play"></i></button>
+            <button class="next"><i class="fas fa-step-forward"></i></button>
+          </div>
+<div class="progress-bar-container">
+          <div class="progress-bar">
+            <div class="progress-indicator"></div>
+          </div>
+        </div>
+          <div class="time-display">
+            <span class="start-time">0:00</span>
+            <span class="end-time">-3:30</span>
+          </div>
+          <div class="id3-tags">
+            <span class="tag"><span class="tag-label">Title:</span> <span class="tag-value title"></span></span>
+            <span class="tag"><span class="tag-label">Artist:</span> <span class="tag-value artist"></span></span>
+            <span class="tag"><span class="tag-label">Year:</span> <span class="tag-value year"></span></span>
+            <span class="tag"><span class="tag-label">Genre:</span> <span class="tag-value genre"></span></span>
+          </div>
+          
+          
+          
+          
+        </div>
+        <audio id="audio-player" src="assets/mp3s/2. Ephemeron.mp3"></audio>
+
+      </div>  
 </body>
 </html>

@@ -1,0 +1,310 @@
+html, body {
+  background-color: black;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+}
+
+.container {
+  max-width: 100%;
+  max-height: 100%;
+  box-sizing: border-box;
+
+}
+
+
+/* Styles par défaut pour la version mobile */
+.cover img  {
+  width: 60%;
+}
+.navbar-center {
+  height: 60px;
+
+}
+
+/* Styles pour la version desktop avec une largeur d'écran minimale de 768px */
+@media (min-width: 768px) {
+  .cover img  {
+    width: 40%;
+  }
+}
+
+/* Styles pour la version desktop avec une largeur d'écran minimale de 1024px */
+@media (min-width: 1024px) {
+  .cover img  {
+    width: 40%;
+  }
+  .navbar-center {
+    height: 100px;
+  }
+  .playlist-list {
+    display: none;
+    top: 100%;
+    left: 0;
+    padding: 10px;
+    background-color: #333;
+    list-style: none;
+    margin: 0;
+  }
+}
+
+
+.navbar {
+  
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: #fff;
+  padding: 10px;
+}
+
+.navbar-left {
+  flex-grow: 1;
+}
+
+.playlist-btn {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 0;
+  transition: color 0.3s ease;
+}
+
+.playlist-btn:hover {
+  color: #555;
+}
+
+.playlist-dropdown {
+  position: relative;
+}
+
+.playlist-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 10px;
+  background-color: #333;
+  list-style: none;
+  margin: 0;
+}
+
+.playlist-list li {
+  color: #fff;
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+.navbar-center {
+
+  flex-grow: 1;
+  text-align: center;
+}
+
+.ascii-art {
+  font-family: monospace;
+  font-size: 0.5em;
+  font-weight: 900;
+  letter-spacing: 0.5em;
+  
+}
+
+.navbar-right {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+
+.navbar-expanded .playlist-list {
+  display: block;
+}
+
+.led {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: grey;
+  transition: background-color 0.2s ease;
+}
+
+.led.active {
+  background-color: rgb(0,133, 41);
+}
+
+
+.player {
+    width: 100%;
+    margin-top: 10px;
+    background-color: black;
+    
+  }
+  .progress-bar-container{
+    display: flex;
+    justify-content: center;
+  }
+  .progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: gray;
+    position: relative;
+  }
+  
+  .progress-indicator {
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .time-display {
+
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    
+  }
+  
+  .start-time,
+  .end-time {
+    color: black;
+    background-color: gray;
+    padding: 2px 5px;
+  }
+  
+  
+  .cover {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .cover img {
+    max-width: 100%;
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+  }
+  /* Styles pour les boutons de transport */
+  .controls{
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    padding-bottom: 40px;
+  }
+.controls button {
+  background-color: transparent;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 0;
+  transition: color 0.3s ease;
+}
+
+.controls button:hover {
+  color: #555;
+}
+
+.controls button:focus {
+  outline: none;
+}
+
+.controls button:active {
+  transform: scale(0.95);
+}
+
+/* Styles spécifiques pour chaque bouton */
+.shuffle {
+  margin-right: 10px;
+}
+
+.play-pause {
+  font-size: 32px;
+  padding: 0 6px;
+}
+
+.previous,
+.next {
+  font-size: 20px;
+  margin: 0 5px;
+}
+
+/* Styles pour les icônes */
+.controls i {
+  pointer-events: none;
+}
+
+/* Style spécifique pour le bouton de lecture/pause lorsqu'il est en pause */
+.play-pause .fas.fa-play::before {
+  content: "\f04b";
+}
+
+/* Style spécifique pour le bouton de lecture/pause lorsqu'il est en lecture */
+.play-pause.playing .fas.fa-play::before {
+  content: "\f04c";
+}
+
+/* Style pour les transitions de couleur au survol */
+.controls button {
+  position: relative;
+  overflow: hidden;
+}
+
+.controls button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.controls button:hover::before {
+  opacity: 1;
+}
+
+  .id3-tags {
+    margin-top: 30px;
+
+    display: flex;
+    justify-content: center;
+    margin-left: 5vw;
+    color: white;
+  }
+  
+  .tag {
+    margin-right: 5vw;
+  }
+  
+  .tag-label {
+    font-weight: bold;
+    color: white;
+  }
+  
+  .tag-value {
+    font-style: italic;
+  }
+  
+  
+
+  
+  
+  
