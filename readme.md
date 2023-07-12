@@ -6,7 +6,7 @@ Developpement d'une application web de player mp3 cross plateforme et responsive
 
 ## Authors
 
-- [@Sylvain](https://www.github.com/Slvn89)
+- [@SylvainD](https://www.github.com/Slvn89)
  
 ## Badges
 
