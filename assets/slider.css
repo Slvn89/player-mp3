@@ -1,0 +1,65 @@
+#slider {
+   width: 100%;
+   height: 25vh;
+   position: relative;
+   overflow: hidden;
+
+}
+
+#slider img {
+   vertical-align: bottom;
+
+}
+
+#imageA,
+#texteA,
+#imageB,
+#texteB {
+   position: absolute;
+
+}
+
+#imageA,
+#imageB {
+   width: 100%;
+}
+
+#texteA,
+#texteB {
+   border: 2px red solid;
+   width: 100%;
+   text-align: center;
+
+}
+
+#imageB,
+#texteB {}
+
+.trans {
+   transition: all .5s;
+}
+
+.swipeLeft {
+
+   transform: translateX(-100%);
+}
+
+.swipeRight {
+   transform: translateX(100%);
+}
+
+.swipeUp {
+   transform: translateY(100%);
+}
+
+.swipeDown {
+   transform: translateY(-100%);
+}
+
+.fadeOut {
+   opacity: 0 ;
+}
+
+.rotate{
+   
+}

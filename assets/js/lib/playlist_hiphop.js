@@ -1,10 +1,30 @@
 const playlist_hiphop = [
     {
-        "title" : "jkdslfjlksdjgf",
-        "author" : "sqkfljlkfj",
-        "cover" : "./assets/img/cover/macover.jpg",
+        "title" : "houses of the Holy",
+        "artist" : "ledzep",
+        "cover" : "./assets/img/cover/ledzep.jpg",
         "year" : 1994,
-        "audio" : "./assets/audio/blabla.mp3",
+        "audio" : "./assets/mp3s/1. Worldline.mp3",
+        "genre" : ['hiphop',"punk","jazz"],
+        "description" : "lorem"
+
+    },
+    {
+        "title" : "remixes",
+        "artist" : "sade",
+        "cover" : "./assets/img/cover/sade.jpg",
+        "year" : 1994,
+        "audio" : "./assets/mp3s/2. Ephemeron.mp3",
+        "genre" : ['hiphop',"punk","jazz"],
+        "description" : "lorem"
+
+    },
+    {
+        "title" : "Lament",
+        "artist" : "moondog",
+        "cover" : "./assets/img/cover/moondog.jpg",
+        "year" : 1994,
+        "audio" : "./assets/mp3s/2. Persuasion System.mp3",
         "genre" : ['hiphop',"punk","jazz"],
         "description" : "lorem"
 
